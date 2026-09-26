@@ -28,7 +28,18 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
       title: insight.title,
       description: insight.excerpt,
       publishedTime: insight.publishDate,
-      ...(insight.image ? { images: [{ ...insight.image }] } : {}),
+      ...(insight.image
+        ? {
+            images: [
+              {
+                url: insight.image.src,
+                width: insight.image.width,
+                height: insight.image.height,
+                alt: insight.image.alt,
+              },
+            ],
+          }
+        : {}),
     },
   };
 }

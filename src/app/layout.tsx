@@ -25,7 +25,14 @@ export const metadata: Metadata = {
     title: site.seo.title,
     description: site.seo.description,
     url: "/",
-    images: [{ ...site.seo.ogImage }],
+    images: [
+      {
+        url: site.seo.ogImage.src,
+        width: site.seo.ogImage.width,
+        height: site.seo.ogImage.height,
+        alt: site.seo.ogImage.alt,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
