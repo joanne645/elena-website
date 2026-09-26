@@ -1,4 +1,4 @@
-import { getConsultationHref, getDictionary } from "@/content";
+import { getDictionary } from "@/content";
 import { defaultLocale } from "@/i18n/config";
 import { Hero } from "@/components/home/Hero";
 import { QuestionStrip } from "@/components/home/QuestionStrip";
@@ -25,7 +25,7 @@ export default function HomePage() {
       <PerspectiveSection content={home.perspectives} />
       <ClientFlow content={home.clientFlow} />
       <AboutElena content={home.about} />
-      <ContactCTA content={home.contact} href={getConsultationHref()} />
+      <ContactCTA content={home.contact} />
     </main>
   );
 }

@@ -22,10 +22,59 @@
   max-width: 700px;
 }
 
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 .button {
   background: #fff;
   color: var(--forest);
   border: 0;
+}
+
+.ghost {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.wechat {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  max-width: 520px;
+}
+
+.qr {
+  width: 96px;
+  height: 96px;
+  flex-shrink: 0;
+  background: #fff;
+  padding: 6px;
+  border-radius: 12px;
+}
+
+.wechat b {
+  display: block;
+  color: var(--brass-soft);
+  font-size: 14px;
+}
+
+.wechat span {
+  display: block;
+  font-size: 13px;
+  color: #d5dfda;
+}
+
+.wechat .email {
+  margin-top: 4px;
+  color: #fff;
+  overflow-wrap: anywhere;
 }
 
 .brandImg {

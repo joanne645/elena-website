@@ -15,13 +15,28 @@ export const site = {
   },
 
   contact: {
-    /** Where every「咨询 Elena」button points: Calendly / form / WeChat page. */
+    /** Online booking link (Calendly etc.). When set, it becomes the primary button. */
     consultationUrl: null as string | null,
-    phone: null as string | null,
-    email: null as string | null,
-    wechatId: null as string | null,
-    dreLicense: null as string | null,
-    brokerage: null as string | null,
+    phone: "408-420-7495" as string | null,
+    phoneHref: "+14084207495",
+    email: "elenachengrealty@gmail.com" as string | null,
+    wechatQr: {
+      src: "/images/wechat-qr.png",
+      width: 348,
+      height: 348,
+      alt: "Elena 微信二维码",
+    } as { src: string; width: number; height: number; alt: string } | null,
+    /** License display — California DRE advertising requirement. */
+    legalName: "Ying Cheng (Elena)",
+    title: "Realtor®",
+    dreLicense: "02231442" as string | null,
+    brokerage: "BQ Realty" as string | null,
+    brokerageAddress: {
+      street: "1631 North First Street #100",
+      city: "San Jose",
+      region: "CA",
+      postalCode: "95112",
+    } as { street: string; city: string; region: string; postalCode: string } | null,
   },
 
   social: {
@@ -68,8 +83,5 @@ export const site = {
 
 /** Resolve the consultation link; falls back to the on-page contact section. */
 export function getConsultationHref(): string {
-  const { consultationUrl, email } = site.contact;
-  if (consultationUrl) return consultationUrl;
-  if (email) return `mailto:${email}`;
-  return "/#contact";
+  return site.contact.consultationUrl ?? "/#contact";
 }

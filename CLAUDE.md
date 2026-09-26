@@ -54,3 +54,11 @@ npm run lint && npm run typecheck && npm run build
 ```
 
 Commit style: conventional commits (`feat:`, `fix:`, `content:`, `style:`).
+
+## Deployment
+
+- GitHub: https://github.com/joanne645/elena-website (branch `main`)
+- Vercel project `elena-website` (team Joan2026); every push to `main` auto-deploys.
+- Live URL: https://elenacheng.vercel.app — set in `src/lib/site-url.ts` (`PRODUCTION_URL`);
+  change it there when a custom domain is connected.
+- Local working copy: `~/Elena Cheng2026/Elena个人网站/elena-website` on Joan's Mac.

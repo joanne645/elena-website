@@ -97,7 +97,13 @@ export type ContactCtaContent = {
   kicker: string;
   titleLines: string[];
   copy: string;
-  buttonLabel: string;
+  /** Shown when site.contact.consultationUrl (Calendly etc.) is set. */
+  bookingLabel: string;
+  phoneLabel: string;
+  emailLabel: string;
+  emailSubject: string;
+  wechatTitle: string;
+  wechatNote: string;
   image: ImageAsset;
 };
 
