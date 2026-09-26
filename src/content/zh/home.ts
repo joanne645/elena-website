@@ -174,10 +174,10 @@ export const home: HomeContent = {
     wechatTitle: "微信扫码咨询",
     wechatNote: "发来房源地址和你最担心的问题",
     image: {
-      src: "/images/elena-contact-white.jpg",
-      width: 760,
-      height: 760,
-      alt: "Elena Cheng",
+      src: "/images/elena-contact-badge.jpg",
+      width: 900,
+      height: 900,
+      alt: "Elena Cheng 硅谷风水看宅",
     },
   },
 };
