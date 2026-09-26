@@ -1,0 +1,65 @@
+.about {
+  background: var(--paper);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 0.86fr 1.14fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.quote {
+  font-family: var(--font-serif);
+  font-size: 27px;
+  line-height: 1.55;
+  border-left: 3px solid var(--brass);
+  padding-left: 22px;
+  margin: 28px 0;
+}
+
+.bio {
+  color: var(--muted);
+}
+
+.roles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.role {
+  background: var(--role-bg);
+  padding: 16px;
+  border-radius: 14px;
+  font-size: 13px;
+}
+
+.role b {
+  display: block;
+  color: var(--forest);
+  font-size: 14px;
+}
+
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .roles {
+    grid-template-columns: 1fr;
+  }
+  .quote {
+    font-size: 23px;
+  }
+}

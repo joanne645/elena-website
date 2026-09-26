@@ -1,0 +1,96 @@
+.clientFlow {
+  background: var(--forest);
+  color: #fff;
+}
+
+.clientFlow :global(.lead) {
+  color: #c8d2ce;
+}
+
+.grid {
+  list-style: none;
+  margin: 44px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.flow {
+  padding: 32px;
+  min-height: 240px;
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.flow:last-child {
+  border-right: none;
+}
+
+.step {
+  font-size: 12px;
+  color: var(--brass-soft);
+  font-weight: 800;
+}
+
+.flow h3 {
+  font-size: 22px;
+  margin: 36px 0 10px;
+  color: #fff;
+}
+
+.flow p {
+  font-size: 13px;
+  color: #bbc8c2;
+}
+
+.flow strong {
+  color: #fff;
+}
+
+/* Wide screens: match the demo exactly — columns size to their one-line titles. */
+@media (min-width: 1280px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .flow h3 {
+    word-break: keep-all;
+  }
+}
+
+@media (max-width: 1100px) {
+  .flow {
+    padding: 28px 24px;
+  }
+}
+
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  /* 2×2: keep the hairline grid consistent */
+  .flow:nth-child(2n) {
+    border-right: none;
+  }
+  .flow:nth-child(-n + 2) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+}
+
+@media (max-width: 680px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .flow {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    min-height: 0;
+  }
+  .flow:last-child {
+    border-bottom: 0;
+  }
+  .flow h3 {
+    margin-top: 20px;
+  }
+}
